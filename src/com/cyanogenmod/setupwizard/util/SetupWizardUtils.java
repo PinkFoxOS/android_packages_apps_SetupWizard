@@ -39,8 +39,6 @@ import android.util.Log;
 /*import com.android.internal.os.IKillSwitchService;*/
 import com.cyanogenmod.setupwizard.SetupWizardApp;
 
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GooglePlayServicesUtil;
 import cyanogenmod.providers.CMSettings;
 
 import static android.content.res.ThemeConfig.SYSTEM_DEFAULT;
@@ -193,6 +191,7 @@ public class SetupWizardUtils {
         return UserHandle.getCallingUserHandle().isOwner();
     }
 
+<<<<<<< HEAD
     public static boolean hasGMS(Context context) {
         return GooglePlayServicesUtil.isGooglePlayServicesAvailable(context) !=
                 ConnectionResult.SERVICE_MISSING;
@@ -206,6 +205,8 @@ public class SetupWizardUtils {
         return isPackageInstalled(context, MODMOD_PACKAGE);
     }
 
+=======
+>>>>>>> 4ab4cb9... Remove Google Play Services dependency
     public static boolean accountExists(Context context, String accountType) {
         return AccountManager.get(context).getAccountsByType(accountType).length > 0;
     }
