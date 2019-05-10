@@ -191,12 +191,6 @@ public class SetupWizardUtils {
         return UserHandle.getCallingUserHandle().isOwner();
     }
 
-<<<<<<< HEAD
-    public static boolean hasGMS(Context context) {
-        return GooglePlayServicesUtil.isGooglePlayServicesAvailable(context) !=
-                ConnectionResult.SERVICE_MISSING;
-    }
-
     /**
      * The assumption here is that if ambient core is present, we have MODs.
      * In the future we will link against the SDK and use the util there.
@@ -205,8 +199,6 @@ public class SetupWizardUtils {
         return isPackageInstalled(context, MODMOD_PACKAGE);
     }
 
-=======
->>>>>>> 4ab4cb9... Remove Google Play Services dependency
     public static boolean accountExists(Context context, String accountType) {
         return AccountManager.get(context).getAccountsByType(accountType).length > 0;
     }
